@@ -10,7 +10,6 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
 
-    
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var questionText: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -18,9 +17,12 @@ class QuestionsViewController: UIViewController {
     var questionList: [Question]? {
         // Когда сюда будут записаны новые вопросы, возьмем первый из них и запишем в currentQuestion
         didSet {
+            currentQuestionIndex = 0
             currentQuestion = questionList?.first
         }
     }
+    
+    var currentQuestionIndex = 0
     var currentQuestion: Question? {
         didSet {
             updateViews()
@@ -39,7 +41,9 @@ class QuestionsViewController: UIViewController {
     private func setup() {
         
         // Станем делегатом для View
-        tableView.dataSource = self
+        tableView.dataSource = self // что показывать?
+        tableView.delegate = self // как реагировать на события?
+
         loadData()
         
         
@@ -64,7 +68,7 @@ class QuestionsViewController: UIViewController {
 }
 
 
-//Поддержка протокола
+// Поддержка протокола UITableViewDataSource
 extension QuestionsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +87,16 @@ extension QuestionsViewController: UITableViewDataSource {
     }
 }
 
-
+// Поддержка протокола делегата
+extension QuestionsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Ячейка с индексом \(indexPath) выбрана")
+        
+        // Перейти к следующему вопросу
+        currentQuestionIndex += 1
+        currentQuestion = questionList?[currentQuestionIndex]
+    }
+}
 
 
 
