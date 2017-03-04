@@ -18,6 +18,7 @@ class QuestionsViewController: UIViewController {
         // Когда сюда будут записаны новые вопросы, возьмем первый из них и запишем в currentQuestion
         didSet {
             currentQuestionIndex = 0
+            score = 0
             currentQuestion = questionList?.first
         }
     }
@@ -28,6 +29,9 @@ class QuestionsViewController: UIViewController {
             updateViews()
         }
     }
+    
+    var score = 0
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,10 +94,24 @@ extension QuestionsViewController: UITableViewDataSource {
 // Поддержка протокола делегата
 extension QuestionsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Ячейка с индексом \(indexPath) выбрана")
+        
+        // Проверим ответ
+        let selectedAnswer = currentQuestion?.answers[indexPath.row]
+        
+        // Если ответа нет, выйдет false
+        if currentQuestion?.answerIsCorrect(answer: selectedAnswer) ?? false {
+            score += 1
+        }
+        print("Ячейка с индексом \(indexPath) выбрана. Счёт \(score)")
         
         // Перейти к следующему вопросу
         currentQuestionIndex += 1
+        
+        guard currentQuestionIndex < (questionList?.count) ?? 0 else {
+            print("Больше нет вопросов")
+            return
+        }
+        
         currentQuestion = questionList?[currentQuestionIndex]
     }
 }
