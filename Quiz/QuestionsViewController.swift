@@ -35,9 +35,44 @@ class QuestionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        log(message: "Это идеальное место для подготовки к работе, когда нужно выполнить подготовку единожды за всё время жизни контроллера")
+        
         setup()
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        log(message: "Метод вызвается в момент, когда контроллер вот-вот появится. Как правило, тут можно подготовиться к отображению анимации")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+        log(message: "Метод только что появился. Идеальное место для начала анимации.")
+    }
+    
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        log(message: "Экран будет пропадать.")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        log(message: "Экан пропал.")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        log(message: "У устройства заканчивается оперативная память. Нужно избавляться от ресурсов, которые которые вы можете восстановить позднее.")
+    }
+    
+    deinit {
+        log(message: "Это последнее место, где контроллер что-то может сделать напоследок")
     }
     
     // Метод вызывается перед переходом на новый экран
@@ -62,6 +97,12 @@ class QuestionsViewController: UIViewController {
         loadData()
         
         
+    }
+
+    
+    // #function — имя метода, в котором этот код выполняется
+    func log(message: String, methodName: String = #function) {
+        print("\n" + methodName + ": " + message + "\n")
     }
     
     private func updateViews() {

@@ -90,8 +90,8 @@
 		75EA68C71E6AD88A009922C0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				75EA68C31E6AD825009922C0 /* QuestionsViewController.swift */,
 				75EA68B81E6AA685009922C0 /* TableDemoViewController.swift */,
+				75EA68C31E6AD825009922C0 /* QuestionsViewController.swift */,
 				75EA68C91E6AF232009922C0 /* ResultViewController.swift */,
 			);
 			name = ViewControllers;
