@@ -39,6 +39,17 @@ class QuestionsViewController: UIViewController {
         setup()
         
     }
+    
+    // Метод вызывается перед переходом на новый экран
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // если мы переходим на ResultViewController
+        if let destVC = segue.destination as? ResultViewController,
+            // и параметром при переходе является объект типа Int
+            let scoreToShow = sender as? Int {
+            destVC.score = scoreToShow
+            
+        }
+    }
 
     //MARK: Setup
     
@@ -109,6 +120,13 @@ extension QuestionsViewController: UITableViewDelegate {
         
         guard currentQuestionIndex < (questionList?.count) ?? 0 else {
             print("Больше нет вопросов")
+            
+            //Вычислить счёт:
+            let score = Double(self.score) / Double(questionList?.count ?? 1) * 100
+            
+            // Перейти на экран результатов, передав score. Перед переходом вызывается метод prepare(for segue: UIStoryboardSegue, sender: Any?)
+            performSegue(withIdentifier: "Show Result", sender: Int(score))
+            
             return
         }
         

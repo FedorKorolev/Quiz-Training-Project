@@ -14,13 +14,12 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     
     
-    
     var score = 0 //От 0 до 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        resultLabel.text = "\(score)"
     }
 
     override func didReceiveMemoryWarning() {

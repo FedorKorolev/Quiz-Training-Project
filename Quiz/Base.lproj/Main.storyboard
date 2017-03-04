@@ -128,6 +128,7 @@
                         <outlet property="imageView" destination="xij-Sp-Iv4" id="CDa-sY-t7b"/>
                         <outlet property="questionText" destination="Ecy-V0-Q9h" id="wdA-zH-4ro"/>
                         <outlet property="tableView" destination="4rL-PV-zyJ" id="L6a-fy-5Vo"/>
+                        <segue destination="PmD-VV-Lcl" kind="show" identifier="Show Result" id="zCY-EM-CwT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WY2-aM-35D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,23 +147,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-Uu-Fed">
-                                <rect key="frame" x="16" y="317" width="344" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ваш счёт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-uH-K6b">
-                                        <rect key="frame" x="112.5" y="0.0" width="118.5" height="33.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GN0-rH-h46">
-                                        <rect key="frame" x="0.0" y="49.5" width="343.5" height="2"/>
-                                    </progressView>
-                                </subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-Uu-Fed">
+                                <rect key="frame" x="163" y="333" width="50" height="2"/>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш счёт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-uH-K6b">
+                                <rect key="frame" x="128" y="317" width="119" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GN0-rH-h46">
+                                <rect key="frame" x="16" y="359" width="343" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dla-Uu-Fed" firstAttribute="centerX" secondItem="Cwx-7n-wOH" secondAttribute="centerX" id="2o4-qh-bPD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GN0-rH-h46" secondAttribute="trailing" id="3Sv-qs-Doo"/>
+                            <constraint firstItem="Dla-Uu-Fed" firstAttribute="centerY" secondItem="Cwx-7n-wOH" secondAttribute="centerY" id="8jy-0B-FGw"/>
+                            <constraint firstItem="kwm-uH-K6b" firstAttribute="centerX" secondItem="Cwx-7n-wOH" secondAttribute="centerX" id="EaA-od-nBs"/>
+                            <constraint firstItem="GN0-rH-h46" firstAttribute="leading" secondItem="Cwx-7n-wOH" secondAttribute="leadingMargin" id="Wrz-ha-o51"/>
+                            <constraint firstItem="kwm-uH-K6b" firstAttribute="centerY" secondItem="Cwx-7n-wOH" secondAttribute="centerY" id="aiP-Pp-YJG"/>
+                            <constraint firstItem="GN0-rH-h46" firstAttribute="top" secondItem="kwm-uH-K6b" secondAttribute="bottom" constant="8" id="jtl-Mm-EvB"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="progressView" destination="GN0-rH-h46" id="1tf-TU-DyQ"/>
