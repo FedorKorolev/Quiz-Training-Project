@@ -15,6 +15,7 @@
 		75EA68BC1E6AB372009922C0 /* animals.json in Resources */ = {isa = PBXBuildFile; fileRef = 75EA68BA1E6AB372009922C0 /* animals.json */; };
 		75EA68BD1E6AB372009922C0 /* cinema.json in Resources */ = {isa = PBXBuildFile; fileRef = 75EA68BB1E6AB372009922C0 /* cinema.json */; };
 		75EA68C01E6ABA1E009922C0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA68BF1E6ABA1E009922C0 /* Question.swift */; };
+		75EA68C21E6AC2A4009922C0 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA68C11E6AC2A4009922C0 /* DataLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		75EA68BA1E6AB372009922C0 /* animals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animals.json; sourceTree = "<group>"; };
 		75EA68BB1E6AB372009922C0 /* cinema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cinema.json; sourceTree = "<group>"; };
 		75EA68BF1E6ABA1E009922C0 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		75EA68C11E6AC2A4009922C0 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				75EA68AA1E6AA29E009922C0 /* Main.storyboard */,
 				75EA68BF1E6ABA1E009922C0 /* Question.swift */,
 				75EA68B81E6AA685009922C0 /* TableDemoViewController.swift */,
+				75EA68C11E6AC2A4009922C0 /* DataLoader.swift */,
 				75EA68BE1E6AB3A4009922C0 /* Support Files */,
 			);
 			path = Quiz;
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75EA68C21E6AC2A4009922C0 /* DataLoader.swift in Sources */,
 				75EA68C01E6ABA1E009922C0 /* Question.swift in Sources */,
 				75EA68B91E6AA685009922C0 /* TableDemoViewController.swift in Sources */,
 				75EA68A71E6AA29E009922C0 /* AppDelegate.swift in Sources */,
@@ -285,6 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -297,6 +302,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Quiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

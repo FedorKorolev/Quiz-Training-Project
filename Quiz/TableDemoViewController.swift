@@ -12,6 +12,14 @@ class TableDemoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        func loadData() {
+            let loader = DataLoader()
+            let result = loader.loadData(fileName: "cinema")
+            print(result)
+        }
+        loadData()
+        
         // Делегируем работу с таблицей классу
         tableView.dataSource = self
     }
