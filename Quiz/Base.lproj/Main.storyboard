@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Questions View Controller-->
         <scene sceneID="fV2-9K-63N">
             <objects>
-                <viewController id="bnm-sH-IZc" sceneMemberID="viewController">
+                <viewController id="bnm-sH-IZc" customClass="QuestionsViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zGn-nd-4bi"/>
                         <viewControllerLayoutGuide type="bottom" id="kKx-uc-Kcq"/>
@@ -81,6 +81,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4rL-PV-zyJ">
                                 <rect key="frame" x="16" y="359.5" width="343" height="250.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="xBI-Ex-Gvj" style="IBUITableViewCellStyleDefault" id="mOf-0S-awO">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mOf-0S-awO" id="Et4-CO-dCc">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xBI-Ex-Gvj">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ecy-V0-Q9h">
                                 <rect key="frame" x="16" y="330.5" width="343" height="21"/>
@@ -105,6 +124,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TaN-Xi-jkz"/>
+                    <connections>
+                        <outlet property="imageView" destination="xij-Sp-Iv4" id="CDa-sY-t7b"/>
+                        <outlet property="questionText" destination="Ecy-V0-Q9h" id="wdA-zH-4ro"/>
+                        <outlet property="tableView" destination="4rL-PV-zyJ" id="L6a-fy-5Vo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WY2-aM-35D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,6 +140,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="C57-e0-hFc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="f2j-9K-7Ce">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

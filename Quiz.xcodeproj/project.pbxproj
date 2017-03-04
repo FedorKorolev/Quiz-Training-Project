@@ -16,6 +16,7 @@
 		75EA68BD1E6AB372009922C0 /* cinema.json in Resources */ = {isa = PBXBuildFile; fileRef = 75EA68BB1E6AB372009922C0 /* cinema.json */; };
 		75EA68C01E6ABA1E009922C0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA68BF1E6ABA1E009922C0 /* Question.swift */; };
 		75EA68C21E6AC2A4009922C0 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA68C11E6AC2A4009922C0 /* DataLoader.swift */; };
+		75EA68C41E6AD825009922C0 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EA68C31E6AD825009922C0 /* QuestionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		75EA68BB1E6AB372009922C0 /* cinema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cinema.json; sourceTree = "<group>"; };
 		75EA68BF1E6ABA1E009922C0 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		75EA68C11E6AC2A4009922C0 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		75EA68C31E6AD825009922C0 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +64,10 @@
 		75EA68A51E6AA29E009922C0 /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				75EA68A61E6AA29E009922C0 /* AppDelegate.swift */,
-				75EA68AA1E6AA29E009922C0 /* Main.storyboard */,
-				75EA68BF1E6ABA1E009922C0 /* Question.swift */,
-				75EA68B81E6AA685009922C0 /* TableDemoViewController.swift */,
-				75EA68C11E6AC2A4009922C0 /* DataLoader.swift */,
+				75EA68C81E6AD89F009922C0 /* Models */,
+				75EA68C71E6AD88A009922C0 /* ViewControllers */,
 				75EA68BE1E6AB3A4009922C0 /* Support Files */,
+				75EA68AA1E6AA29E009922C0 /* Main.storyboard */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -76,12 +76,31 @@
 			isa = PBXGroup;
 			children = (
 				75EA68AF1E6AA29E009922C0 /* LaunchScreen.storyboard */,
+				75EA68A61E6AA29E009922C0 /* AppDelegate.swift */,
 				75EA68AD1E6AA29E009922C0 /* Assets.xcassets */,
 				75EA68BA1E6AB372009922C0 /* animals.json */,
 				75EA68BB1E6AB372009922C0 /* cinema.json */,
 				75EA68B21E6AA29E009922C0 /* Info.plist */,
 			);
 			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		75EA68C71E6AD88A009922C0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				75EA68C31E6AD825009922C0 /* QuestionsViewController.swift */,
+				75EA68B81E6AA685009922C0 /* TableDemoViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		75EA68C81E6AD89F009922C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75EA68BF1E6ABA1E009922C0 /* Question.swift */,
+				75EA68C11E6AC2A4009922C0 /* DataLoader.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75EA68C21E6AC2A4009922C0 /* DataLoader.swift in Sources */,
+				75EA68C41E6AD825009922C0 /* QuestionsViewController.swift in Sources */,
 				75EA68C01E6ABA1E009922C0 /* Question.swift in Sources */,
 				75EA68B91E6AA685009922C0 /* TableDemoViewController.swift in Sources */,
 				75EA68A71E6AA29E009922C0 /* AppDelegate.swift in Sources */,
@@ -325,6 +345,7 @@
 				75EA68B71E6AA29E009922C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
