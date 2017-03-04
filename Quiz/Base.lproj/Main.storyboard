@@ -134,6 +134,45 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="813.64317841079469"/>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="Jdw-BC-rPv">
+            <objects>
+                <viewController id="PmD-VV-Lcl" customClass="ResultViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l5L-Se-rev"/>
+                        <viewControllerLayoutGuide type="bottom" id="4AU-pH-Ige"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cwx-7n-wOH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Dla-Uu-Fed">
+                                <rect key="frame" x="16" y="317" width="344" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ваш счёт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-uH-K6b">
+                                        <rect key="frame" x="112.5" y="0.0" width="118.5" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GN0-rH-h46">
+                                        <rect key="frame" x="0.0" y="49.5" width="343.5" height="2"/>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="GN0-rH-h46" id="1tf-TU-DyQ"/>
+                        <outlet property="resultLabel" destination="kwm-uH-K6b" id="5LW-f2-Joe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuL-oI-08U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2869.5999999999999" y="813.64317841079469"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0hZ-tm-PvH">
             <objects>
