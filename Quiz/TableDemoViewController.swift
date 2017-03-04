@@ -41,7 +41,9 @@ extension TableDemoViewController: UITableViewDataSource {
         // Настроим нашу ячейку. row - индекс ячейки внутри секции
         let strToShow = strings[indexPath.row]
         
-        //Зададим текст в ячейке, используя конкрутную строку
+        // indexPath.section - номер секции
+        
+        //Зададим текст в ячейке, используя конкретную строку
         cell.textLabel?.text = "\(indexPath.row) = \(strToShow)"
         
         return cell
