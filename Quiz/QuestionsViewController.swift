@@ -32,6 +32,7 @@ class QuestionsViewController: UIViewController {
     
     var score = 0
     
+    var fileName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,7 +114,8 @@ class QuestionsViewController: UIViewController {
     
     private func loadData() {
         let loader = DataLoader()
-        let result = loader.loadData(fileName: "cinema")
+        
+        let result = loader.loadData(fileName: fileName!)
         print(result)
         
         self.title = result.quizName
